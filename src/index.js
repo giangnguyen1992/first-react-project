@@ -4,6 +4,7 @@ import Chatkit from '@pusher/chatkit';
 import './style/style.scss';
 
 import MessageList from './components/MessageList';
+import SendMessageForm from './components/SendMessageForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <MessageList messages={this.state.messages}/>
+        <SendMessageForm />
       </div>
     )
   }
