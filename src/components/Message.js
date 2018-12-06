@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Message (props) {
+function message (props) {
     return (
         <div className="message">
             <div className="message-username">{props.username}</div>
             <div className="message-text">{props.text}</div>
         </div>
-    )
+    );
 };
 
-export default Message
+export default message

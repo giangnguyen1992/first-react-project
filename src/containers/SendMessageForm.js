@@ -1,21 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class SendMessageForm extends React.Component {
-    
+class SendMessageForm extends Component {
     constructor() {
         super()
         this.state = {
             message: ''
         }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-    }
+    };
     
     handleChange(e) {
         this.setState({
             message: e.target.value
         })
-    }
+    };
     
     handleSubmit(e) {
         e.preventDefault()
@@ -23,21 +20,21 @@ class SendMessageForm extends React.Component {
         this.setState({
             message: ''
         })
-    }
+    };
     
     render() {
         return (
             <form
-                onSubmit={this.handleSubmit}
+                onSubmit={(e) => this.handleSubmit(e)}
                 className="send-message-form">
                 <input
-                    onChange={this.handleChange}
+                    onChange={(e) => this.handleChange(e)}
                     value={this.state.message}
                     placeholder="Type your message and hit ENTER"
                     type="text" />
             </form>
-        )
-    }
-}
+        );
+    };
+};
 
 export default SendMessageForm
