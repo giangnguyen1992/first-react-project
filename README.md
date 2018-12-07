@@ -2,7 +2,7 @@
 
 ### Features
 
-- builded completly with react.js
+- built completely with react.js
 - worked with the chatkit api
 - styled with SASS
 - compiled with custom written webpack and babel configuration
